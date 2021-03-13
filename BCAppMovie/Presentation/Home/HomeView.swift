@@ -13,11 +13,13 @@ class HomeView: UIViewController {
 
     private var viewModel = HomeViewModel()
     private var disposeBag = DisposeBag()
+    private var router = HomeRouter()
     private var movies = [Movie]()
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        viewModel.bind(view: self, router: router)
         self.getData()
     }
 
@@ -76,8 +78,8 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-   //         viewModel.makeDetailView(movieID: String(self.movies[indexPath.row].movieID))
+               
+        viewModel.makeDetailView(movieID: String(self.movies[indexPath.row].movieID))
 
     }
 }

@@ -11,6 +11,7 @@ import RxSwift
 class HomeApiManager {
 
     func getPopularMovies() -> Observable<[Movie]> {
+        
         return Observable.create { observer in
             
             let session = URLSession.shared

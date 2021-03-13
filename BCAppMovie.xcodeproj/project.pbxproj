@@ -34,6 +34,12 @@
 		DBC04B0125FCFAEF00E03BF9 /* CustomMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC04AFF25FCFAEE00E03BF9 /* CustomMovieCell.swift */; };
 		DBC04B0225FCFAEF00E03BF9 /* CustomMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC04B0025FCFAEF00E03BF9 /* CustomMovieCell.xib */; };
 		DBC04B0725FCFD5F00E03BF9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC04B0625FCFD5F00E03BF9 /* Extensions.swift */; };
+		DBC04B1C25FD1BDC00E03BF9 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC04B1A25FD1BDC00E03BF9 /* DetailView.xib */; };
+		DBC04B1D25FD1BDC00E03BF9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC04B1B25FD1BDC00E03BF9 /* DetailView.swift */; };
+		DBC04B2225FD1C3A00E03BF9 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC04B2125FD1C3A00E03BF9 /* DetailViewModel.swift */; };
+		DBC04B2B25FD1D0600E03BF9 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC04B2A25FD1D0500E03BF9 /* DetailRouter.swift */; };
+		DBC04B3025FD1D6700E03BF9 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC04B2F25FD1D6700E03BF9 /* MovieDetail.swift */; };
+		DBC04B3525FD1DBD00E03BF9 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC04B3425FD1DBD00E03BF9 /* HomeRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +98,12 @@
 		DBC04AFF25FCFAEE00E03BF9 /* CustomMovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMovieCell.swift; sourceTree = "<group>"; };
 		DBC04B0025FCFAEF00E03BF9 /* CustomMovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomMovieCell.xib; sourceTree = "<group>"; };
 		DBC04B0625FCFD5F00E03BF9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DBC04B1A25FD1BDC00E03BF9 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		DBC04B1B25FD1BDC00E03BF9 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		DBC04B2125FD1C3A00E03BF9 /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		DBC04B2A25FD1D0500E03BF9 /* DetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		DBC04B2F25FD1D6700E03BF9 /* MovieDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
+		DBC04B3425FD1DBD00E03BF9 /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		DEEFC942E70F72348E8BFB16 /* Pods-BCAppMovie-BCAppMovieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCAppMovie-BCAppMovieUITests.debug.xcconfig"; path = "Target Support Files/Pods-BCAppMovie-BCAppMovieUITests/Pods-BCAppMovie-BCAppMovieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,6 +219,7 @@
 		DBC04A7E25FC772100E03BF9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DBC04B1925FD1BBB00E03BF9 /* DetailView */,
 				DBC04AEF25FCF26700E03BF9 /* Home */,
 				DBC04AC425FCDF9100E03BF9 /* Login */,
 			);
@@ -296,6 +309,9 @@
 		DBC04A9225FC7F9B00E03BF9 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				DBC04B2725FD1C5B00E03BF9 /* Router */,
+				DBC04B2625FD1C4E00E03BF9 /* View */,
+				DBC04B2125FD1C3A00E03BF9 /* DetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -311,6 +327,7 @@
 		DBC04A9925FC7FF500E03BF9 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				DBC04B2F25FD1D6700E03BF9 /* MovieDetail.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -344,12 +361,53 @@
 		DBC04AEF25FCF26700E03BF9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DBC04B2825FD1C9C00E03BF9 /* Router */,
 				DBC04AFF25FCFAEE00E03BF9 /* CustomMovieCell.swift */,
 				DBC04B0025FCFAEF00E03BF9 /* CustomMovieCell.xib */,
 				DBC04AF025FCF28500E03BF9 /* HomeView.swift */,
 				DBC04AF125FCF28500E03BF9 /* HomeView.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		DBC04B1925FD1BBB00E03BF9 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				DBC04B2925FD1CD100E03BF9 /* Router */,
+				DBC04B1B25FD1BDC00E03BF9 /* DetailView.swift */,
+				DBC04B1A25FD1BDC00E03BF9 /* DetailView.xib */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		DBC04B2625FD1C4E00E03BF9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DBC04B2725FD1C5B00E03BF9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DBC04B2825FD1C9C00E03BF9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DBC04B3425FD1DBD00E03BF9 /* HomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DBC04B2925FD1CD100E03BF9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DBC04B2A25FD1D0500E03BF9 /* DetailRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,6 +524,7 @@
 				DBC04AC925FCE02800E03BF9 /* LoginView.xib in Resources */,
 				DBC04A4A25FC753200E03BF9 /* Main.storyboard in Resources */,
 				DBC04AF325FCF28500E03BF9 /* HomeView.xib in Resources */,
+				DBC04B1C25FD1BDC00E03BF9 /* DetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,9 +654,12 @@
 			files = (
 				DBC04ABB25FCD8DE00E03BF9 /* TokenEntity.swift in Sources */,
 				DBC04AF225FCF28500E03BF9 /* HomeView.swift in Sources */,
+				DBC04B1D25FD1BDC00E03BF9 /* DetailView.swift in Sources */,
+				DBC04B2B25FD1D0600E03BF9 /* DetailRouter.swift in Sources */,
 				DBC04A4725FC753200E03BF9 /* ViewController.swift in Sources */,
 				DBC04AC025FCDEBE00E03BF9 /* LoginViewModel.swift in Sources */,
 				DBC04AB625FC924900E03BF9 /* HomeViewModel.swift in Sources */,
+				DBC04B3025FD1D6700E03BF9 /* MovieDetail.swift in Sources */,
 				DBC04A4325FC753200E03BF9 /* AppDelegate.swift in Sources */,
 				DBC04A8825FC7EAD00E03BF9 /* LoginApiManager.swift in Sources */,
 				DBC04AC825FCE02800E03BF9 /* LoginView.swift in Sources */,
@@ -605,6 +667,8 @@
 				DBC04A4525FC753200E03BF9 /* SceneDelegate.swift in Sources */,
 				DBC04AAC25FC839500E03BF9 /* MovieEntity.swift in Sources */,
 				DBC04B0725FCFD5F00E03BF9 /* Extensions.swift in Sources */,
+				DBC04B2225FD1C3A00E03BF9 /* DetailViewModel.swift in Sources */,
+				DBC04B3525FD1DBD00E03BF9 /* HomeRouter.swift in Sources */,
 				DBC04A9B25FC800A00E03BF9 /* DetailMovieApiManager.swift in Sources */,
 				DBC04A9525FC7FDC00E03BF9 /* HomeApiManager.swift in Sources */,
 				DBC04AE825FCF16000E03BF9 /* LoginRouter.swift in Sources */,
