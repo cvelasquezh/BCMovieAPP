@@ -39,6 +39,7 @@ class LoginView: UIViewController {
                 print("SE obtuvo error en token")
 
             }, onCompleted: {
+                ProgressHUD.dismiss()
             }).disposed(by: disposeBag)
     }
     
@@ -54,9 +55,13 @@ class LoginView: UIViewController {
                     }
             }, onError: { error in
                 print(error.localizedDescription)
+                ProgressHUD.dismiss()
+
                 print("SE obtuvo error iniciando sesion")
 
             }, onCompleted: {
+                ProgressHUD.dismiss()
+
             }).disposed(by: disposeBag)
     }
         

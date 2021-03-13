@@ -34,6 +34,7 @@ class LoginApiManager {
                 }
                 else if response.statusCode == 401 {
                     print("Error 401")
+
                 }
                 observer.onCompleted()
             }.resume()
