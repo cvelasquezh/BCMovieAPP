@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class HomeView: UIViewController {
+class HomeView: BaseViewController {
 
     private var viewModel = HomeViewModel()
     private var disposeBag = DisposeBag()
@@ -22,7 +22,11 @@ class HomeView: UIViewController {
         viewModel.bind(view: self, router: router)
         self.getData()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     private func configureTableView() {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(UINib(nibName: "CustomMovieCell", bundle: nil), forCellReuseIdentifier: "CustomMovieCell")
@@ -50,7 +54,7 @@ class HomeView: UIViewController {
             .observeOn(MainScheduler.instance)
             .subscribe(
                 onNext: { movies in
-                    self.movies = movies
+                    self.movies = movies.listOfMovies
                     self.reloadTableView()
             }, onError: { error in
                 print(error.localizedDescription)

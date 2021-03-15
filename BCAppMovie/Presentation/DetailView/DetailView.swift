@@ -8,7 +8,7 @@
 import UIKit
 import RxSwift
 
-class DetailView: UIViewController {
+class DetailView: BaseViewController {
     
     @IBOutlet private weak var titleHeader: UILabel!
     @IBOutlet private weak var imageFilm: UIImageView!
@@ -26,6 +26,10 @@ class DetailView: UIViewController {
         super.viewDidLoad()
         getDataAndShowDetailMove()
         viewModel.bind(view: self, router: router)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     private func getDataAndShowDetailMove() {

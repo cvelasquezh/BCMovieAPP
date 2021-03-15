@@ -20,7 +20,7 @@ class DetailViewModel {
     }
     
     func getMovieData(movieID: String) -> Observable<MovieDetail> {
-        return managerConnections.getDetailMovies(movideID: movieID)
+        return managerConnections.getDetailMovies(movieID: movieID)
     }
     
     func getImageMovie(urlString: String) -> Observable<UIImage> {

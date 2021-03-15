@@ -30,3 +30,14 @@ extension UIImageView {
         }.resume()
     }
 }
+
+extension RegistrationError: LocalizedError {
+    public var errorDescription: String? {
+        switch self {
+        case .invalidEmail:
+            return NSLocalizedString("Datos Incorrectos", comment: "Datos Incorrectos")
+        case .invalidPassword:
+            return NSLocalizedString("Datos Incorrectos", comment: "Datos incorrectos")
+        }
+    }
+}

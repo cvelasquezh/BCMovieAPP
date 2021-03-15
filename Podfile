@@ -11,7 +11,8 @@ target 'BCAppMovie' do
   pod 'RxCocoa'
   pod 'IQKeyboardManagerSwift'
   pod 'ProgressHUD'
-
+  pod 'SwiftMessages'
+  
   target 'BCAppMovieTests' do
     inherit! :search_paths
     # Pods for testing

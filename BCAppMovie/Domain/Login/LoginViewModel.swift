@@ -9,6 +9,7 @@ import Foundation
 import RxSwift
 
 class LoginViewModel {
+    
     private var managerConnections = LoginApiManager()
     private weak var view: LoginView?
     private var router: LoginRouter?

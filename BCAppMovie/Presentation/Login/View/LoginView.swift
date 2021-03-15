@@ -8,7 +8,8 @@
 import UIKit
 import RxSwift
 import ProgressHUD
-class LoginView: UIViewController {
+import SwiftMessages
+class LoginView: BaseViewController {
 
     @IBOutlet weak var userTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -23,6 +24,10 @@ class LoginView: UIViewController {
         viewModel.bind(view: self, router: loginRouter)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.barNavigationIsHidden = true
+        super.viewWillAppear(animated)
+    }
     func getToken(){
         ProgressHUD.show()
         return viewModel.getToken()
@@ -37,7 +42,7 @@ class LoginView: UIViewController {
             }, onError: { error in
                 print(error.localizedDescription)
                 print("SE obtuvo error en token")
-
+                ProgressHUD.dismiss()
             }, onCompleted: {
                 ProgressHUD.dismiss()
             }).disposed(by: disposeBag)
@@ -54,11 +59,12 @@ class LoginView: UIViewController {
                         
                     }
             }, onError: { error in
-                print(error.localizedDescription)
-                ProgressHUD.dismiss()
-
-                print("SE obtuvo error iniciando sesion")
-
+                DispatchQueue.main.async {
+                    print(error.localizedDescription)
+                    ProgressHUD.dismiss()
+                    self.showAlert(tittle: "Mensaje", message: error.localizedDescription)
+                    print("SE obtuvo error iniciando sesion")
+                }
             }, onCompleted: {
                 ProgressHUD.dismiss()
 
@@ -67,6 +73,13 @@ class LoginView: UIViewController {
         
     @IBAction func onStartSession(_ sender: Any) {
         self.getToken()
+    }
+    
+    func showAlert(tittle: String, message: String){
+        let alert =  UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancelar = UIAlertAction(title: "Ok", style: .default, handler: {(action) in  })
+        alert.addAction(cancelar)
+        present(alert, animated: true, completion: nil)
     }
 }
         

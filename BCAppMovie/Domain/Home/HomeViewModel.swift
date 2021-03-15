@@ -8,11 +8,13 @@
 import Foundation
 import RxSwift
 class HomeViewModel{
+    
     private weak var view: HomeView?
     private var router: HomeRouter?
     private var managerConnection = HomeApiManager()
     
-    func gestListMoviesData() -> Observable<[Movie]> {
+     
+    func gestListMoviesData() -> Observable<Movies> {
         return managerConnection.getPopularMovies()
     }
     

@@ -21,12 +21,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         return viewModel.gestListMoviesData()
         //Manejar la concurrencia o hilos de RxSwift
-            .subscribeOn(MainScheduler.instance)
+        .subscribeOn(MainScheduler.instance)
         .observeOn(MainScheduler.instance)
         //Suscríbirme a el observable
             .subscribe(
                 onNext: { movies in
-                    self.movies = movies
+                    self.movies = movies.listOfMovies
                     print("ok ok ok")
 
                    // self.reloadTableView()

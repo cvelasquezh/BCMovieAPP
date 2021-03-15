@@ -10,6 +10,9 @@
 		49793DA64CA5F4A5465C4098 /* Pods_BCAppMovie_BCAppMovieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B5FCB90991A335BC2DE43B /* Pods_BCAppMovie_BCAppMovieUITests.framework */; };
 		A929D4943CE0F985AFABB82A /* Pods_BCAppMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789029C41B624A318160DBFE /* Pods_BCAppMovie.framework */; };
 		B4460A8D8051B1D214B7B691 /* Pods_BCAppMovieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1B16F84E2A474CDF5A52F9 /* Pods_BCAppMovieTests.framework */; };
+		DB63C7DF25FE313300F2511F /* BaseApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB63C7DE25FE313300F2511F /* BaseApiManager.swift */; };
+		DB63C7F225FEE24E00F2511F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB63C7F125FEE24E00F2511F /* BaseViewController.swift */; };
+		DB63C80425FEEE7B00F2511F /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB63C80325FEEE7B00F2511F /* Enum.swift */; };
 		DBC04A4325FC753200E03BF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC04A4225FC753200E03BF9 /* AppDelegate.swift */; };
 		DBC04A4525FC753200E03BF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC04A4425FC753200E03BF9 /* SceneDelegate.swift */; };
 		DBC04A4725FC753200E03BF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC04A4625FC753200E03BF9 /* ViewController.swift */; };
@@ -68,6 +71,9 @@
 		95697021B64DFC25BD6F4AB2 /* Pods-BCAppMovieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCAppMovieTests.release.xcconfig"; path = "Target Support Files/Pods-BCAppMovieTests/Pods-BCAppMovieTests.release.xcconfig"; sourceTree = "<group>"; };
 		AB098A34B63547F13AA62255 /* Pods-BCAppMovie-BCAppMovieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCAppMovie-BCAppMovieUITests.release.xcconfig"; path = "Target Support Files/Pods-BCAppMovie-BCAppMovieUITests/Pods-BCAppMovie-BCAppMovieUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D8B5FCB90991A335BC2DE43B /* Pods_BCAppMovie_BCAppMovieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BCAppMovie_BCAppMovieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB63C7DE25FE313300F2511F /* BaseApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiManager.swift; sourceTree = "<group>"; };
+		DB63C7F125FEE24E00F2511F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DB63C80325FEEE7B00F2511F /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		DBC04A3F25FC753200E03BF9 /* BCAppMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BCAppMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC04A4225FC753200E03BF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBC04A4425FC753200E03BF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +228,7 @@
 				DBC04B1925FD1BBB00E03BF9 /* DetailView */,
 				DBC04AEF25FCF26700E03BF9 /* Home */,
 				DBC04AC425FCDF9100E03BF9 /* Login */,
+				DB63C7F125FEE24E00F2511F /* BaseViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -242,6 +249,7 @@
 				DBC04A9025FC7F7D00E03BF9 /* Detail */,
 				DBC04A8F25FC7F6D00E03BF9 /* Home */,
 				DBC04A8225FC79E900E03BF9 /* Login */,
+				DB63C7DE25FE313300F2511F /* BaseApiManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -251,6 +259,7 @@
 			children = (
 				DBC04AB025FC864000E03BF9 /* Constants.swift */,
 				DBC04B0625FCFD5F00E03BF9 /* Extensions.swift */,
+				DB63C80325FEEE7B00F2511F /* Enum.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -654,7 +663,9 @@
 			files = (
 				DBC04ABB25FCD8DE00E03BF9 /* TokenEntity.swift in Sources */,
 				DBC04AF225FCF28500E03BF9 /* HomeView.swift in Sources */,
+				DB63C80425FEEE7B00F2511F /* Enum.swift in Sources */,
 				DBC04B1D25FD1BDC00E03BF9 /* DetailView.swift in Sources */,
+				DB63C7F225FEE24E00F2511F /* BaseViewController.swift in Sources */,
 				DBC04B2B25FD1D0600E03BF9 /* DetailRouter.swift in Sources */,
 				DBC04A4725FC753200E03BF9 /* ViewController.swift in Sources */,
 				DBC04AC025FCDEBE00E03BF9 /* LoginViewModel.swift in Sources */,
@@ -663,6 +674,7 @@
 				DBC04A4325FC753200E03BF9 /* AppDelegate.swift in Sources */,
 				DBC04A8825FC7EAD00E03BF9 /* LoginApiManager.swift in Sources */,
 				DBC04AC825FCE02800E03BF9 /* LoginView.swift in Sources */,
+				DB63C7DF25FE313300F2511F /* BaseApiManager.swift in Sources */,
 				DBC04B0125FCFAEF00E03BF9 /* CustomMovieCell.swift in Sources */,
 				DBC04A4525FC753200E03BF9 /* SceneDelegate.swift in Sources */,
 				DBC04AAC25FC839500E03BF9 /* MovieEntity.swift in Sources */,
